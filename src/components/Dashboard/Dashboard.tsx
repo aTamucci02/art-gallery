@@ -1,6 +1,5 @@
-// src/components/Dashboard/Dashboard.tsx
 import React, { useState } from "react";
-import './Dashboard.css';
+import "./Dashboard.css";
 import ArtDetails from "./ArtDetails";
 
 export interface ArtItem {
@@ -16,20 +15,19 @@ export interface DashboardProps {
 }
 
 const Dashboard: React.FC<DashboardProps> = ({ items, sectionTitle }) => {
-  // always call hooks first
   const [current, setCurrent] = useState<ArtItem | null>(items[0] || null);
-  const [openDetails, setOpenDetails] = useState<boolean>(false);
+  const [openDetails, setOpenDetails] = useState(false);
 
   if (!items.length || current === null) {
     return <p className="dashboard-loading">No items to display.</p>;
   }
 
   const handleSelect = (item: ArtItem) => {
-    setCurrent(item)
+    setCurrent(item);
     setOpenDetails(false);
   };
-  const handleViewDetails = () =>
-    setOpenDetails(true);
+
+  const handleViewDetails = () => setOpenDetails(true);
 
   const thumbnails = items.filter(item => item.key !== current.key);
 
@@ -50,9 +48,7 @@ const Dashboard: React.FC<DashboardProps> = ({ items, sectionTitle }) => {
         <div className="dashboard-hero-overlay">Click to view details</div>
       </div>
 
-      {openDetails &&(
-        <ArtDetails item={current} />
-      )}
+      {openDetails && <ArtDetails item={current} />}
 
       <div className="dashboard-thumbnails">
         {thumbnails.map(item => (
