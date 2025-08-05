@@ -1,16 +1,16 @@
-// src/App.tsx
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Dashboard from './components/Dashboard';
+import Illustrations from "./pages/Illustrations";
+import NavHeader from './components/NavHeader';
 
-const App: React.FC = () => {
-  return (
+const App: React.FC = () => (
+  <>
+  <NavHeader/>
     <Routes>
-      {/* Home path "/" renders the Dashboard component */}
-      <Route path="/" element={<Dashboard />} />
-      {/* You can add more routes here later */}
+      <Route path="/" element={<Illustrations/>} />
+      <Route path="/illustrations" element={<Illustrations />} />
     </Routes>
-  );
-};
+  </>
+);
 
 export default App;

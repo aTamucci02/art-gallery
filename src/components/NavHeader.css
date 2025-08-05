@@ -1,0 +1,71 @@
+/* overall header background */
+.nav-header {
+  background: linear-gradient(to bottom, #3a6ea5, #244b78);
+  padding: 1rem;
+  box-shadow: inset 0 -2px 4px rgba(0,0,0,0.4);
+  text-align: center;
+}
+
+/* pill nav: three equal zones */
+.pill-nav {
+  display: flex;
+  max-width: 600px;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.1);
+  border-radius: 999px;
+  padding: 0.5rem 0;
+}
+
+/* each zone flexes equally */
+.pill-zone {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* image above link */
+.pill-img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+
+/* center title overrides */
+.title-zone {
+  /* no image here, but keep same spacing */
+  padding-top: 1.25rem; /* to push title down into line‐2 */
+}
+
+/* site title styling */
+.site-title {
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+
+/* link styles */
+.pill-link {
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0.25rem 0;
+  transition: color 0.2s;
+}
+
+/* hover */
+.pill-link:hover {
+  color: #ffd600;
+  text-shadow: 0 0 4px rgba(255,214,0,0.8);
+}
+
+/* active pill background */
+.pill-link.active {
+  background: rgba(255,255,255,0.2);
+  border-radius: 999px;
+  padding: 0.25rem 0.75rem;
+}

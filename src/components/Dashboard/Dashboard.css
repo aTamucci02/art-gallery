@@ -1,0 +1,68 @@
+.dashboard-section {
+  margin-bottom: 2rem;
+}
+
+.dashboard-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.dashboard-hero-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.dashboard-hero-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.dashboard-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  font-size: 1rem;
+  transition: opacity 0.3s ease;
+  border-radius: 8px;
+}
+
+.dashboard-hero-container:hover .dashboard-hero-overlay {
+  opacity: 1;
+}
+
+.dashboard-thumbnails {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+}
+
+.dashboard-thumb-item {
+  flex: 0 0 auto;
+}
+
+.dashboard-thumb-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.dashboard-thumb-image:hover {
+  transform: scale(1.1);
+}
